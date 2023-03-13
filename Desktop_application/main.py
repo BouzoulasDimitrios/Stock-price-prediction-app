@@ -4,6 +4,10 @@ from general_functinos import stock_prediction_functions as spf
 from model import LSTM
 import torch
 import sys
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
+
 
 input_dim = 1
 hidden_dim = 16
@@ -14,10 +18,6 @@ saved_model_path = "predict_stock_price_weights"
 model = LSTM(input_dim=input_dim, hidden_dim=hidden_dim, output_dim=output_dim, num_layers=num_layers)
 model.load_state_dict(torch.load(saved_model_path))
 
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-        
 class MyWindow(QMainWindow):
     def __init__(self):
         super(MyWindow, self).__init__()

@@ -1,0 +1,9 @@
+matplotlib
+sklearn
+torch
+numpy
+pandas
+PyQt5
+datetime
+yfinance
+fix_yahoo_finance
